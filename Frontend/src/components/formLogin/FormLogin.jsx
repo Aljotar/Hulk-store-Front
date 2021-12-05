@@ -36,13 +36,13 @@ export const FormLogin = ({ requestUserData, cart }) => {
         event.stopPropagation();
 
         try {
-            const response = await axios.post('https://proyecto-final-db.herokuapp.com/api/auth/login', input);
+            const response = await axios.post('https://hulkstore-server.herokuapp.com/api/auth/login', input);
             const { token, name } = response.data;
             guardarEnLocalStorage({ key: 'token', value: { token } });
             if (cart.length !== 0) {
-                swal('Genial ' + name + ' estas listo para comprar tus vinos en Rolling Winery ');
+                swal('Genial ' + name + ' estas listo para comprar een Hulk Store ');
             } else {
-                swal('Bienvenido al Mundo Rolling Winery ' + name);
+                swal('Bienvenido a Hulk Store ' + name);
             }
             await requestUserData();
             //El push redirecciona a la pantalla indicada en el parametro.

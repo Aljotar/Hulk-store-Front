@@ -77,7 +77,7 @@ export const Footer = () => {
                     </div>
                     <div className="d-flex align-items-center justify-content-between footer2">
                         <div>
-                            <p>© 2021 Tienda DC/MARVEL</p>
+                            <p>© 2021 Hulk Store</p>
                         </div>
                         <div>
                             <p>Universo DC/MARVEL</p>
