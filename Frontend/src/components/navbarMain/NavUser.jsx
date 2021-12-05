@@ -30,7 +30,7 @@ export const NavUser = ({ tokenLocal, splitLocation, user, logout, favorites, ca
                 <NavDropdown
                     className="d-flex align-items-center justify-content-center navbar-user mx-2 d-none d-md-block "
                     id="nav-dropdown-ligth-example"
-                    title={<span className="text-white">Hola {user.name} </span>}
+                    title={<span className="text-black">Hola {user.name} </span>}
                     menuVariant="ligth"
                 >
                     <NavDropdown.Item

@@ -1,13 +1,10 @@
 .form-login{
 color: black;
 font-family: 'Playfair Display', serif;
-border: solid #b59062;
+border: solid #20501c;
 }
 
 .header {
-    color: black;
-}
-.subHeader{
     color: black;
 }
 .login-form {

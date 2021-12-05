@@ -75,9 +75,6 @@ const NavbarMainMobile = ({ user, setShow, show }) => {
                     <li className="p-2 mx-3">
                         <Nav.Link as={NavLink} to="/contact" activeClassName="link-active" onClick={handleClose}>CONTACTO</Nav.Link>
                     </li>
-                    <li className="p-2 mx-3">
-                        <Nav.Link as={NavLink} to="/about" activeClassName="link-active" onClick={handleClose}>HISTORIA</Nav.Link>
-                    </li>
                     {user.role === 'admin' &&      
                     <li className="p-2 mx-3">
                         <Nav.Link as={NavLink} to="/adminBoard" activeClassName="link-active"><FaWrench className="mb-1 me-2" />ADMIN BOARD</Nav.Link>

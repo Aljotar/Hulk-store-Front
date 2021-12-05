@@ -61,9 +61,6 @@ export const NavMiddle = ({ splitLocation, favorites, cart }) => {
                     <li className="p-2 mx-3">
                         <Nav.Link as={NavLink} to="/contact" onClick={scrollToTop} activeClassName="link-active">CONTACTO</Nav.Link>
                     </li>
-                    <li className="p-2 mx-3">
-                        <Nav.Link as={NavLink} to="/about" onClick={scrollToTop} activeClassName="link-active" >HISTORIA</Nav.Link>
-                    </li>
                     {visible &&
                         <div className="pb-2 position-end">
                             <span className="d-flex align-items-center navbar-icons">

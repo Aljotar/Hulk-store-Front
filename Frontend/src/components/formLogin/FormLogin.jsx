@@ -100,8 +100,7 @@ export const FormLogin = ({ requestUserData, cart }) => {
         <Card className="d-flex justify-content-center form-login">
             <Card.Body>
                 <div className="d-flex flex-column align-items-center">
-                    <h3 className="header">Bienvenido a Rolling Wine</h3>
-                    <p className="subHeader">Solo para miembros</p>
+                    <h3 className="header">Bienvenido a Hulk Store</h3>
                 </div>
                 <Form 
                 noValidate validated={validated} className="login-form" onSubmit={handleSubmit} >

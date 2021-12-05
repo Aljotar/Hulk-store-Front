@@ -13,7 +13,6 @@ import Register from './pages/Register'
 import Store from "./pages/Store";
 import Cart from "./pages/Cart";
 import Favorite from "./pages/Favorite";
-import About from "./pages/About";
 import Contact from "./pages/Contact";
 import MyProfile from "./pages/MyProfile";
 // admin pages
@@ -165,10 +164,6 @@ function App() {
         {/* pages */}
         <Route path="/" exact >
           <Home />
-        </Route>
-
-        <Route path="/about" >
-          <About />
         </Route>
 
         <Route path="/store/:productId">

@@ -14,7 +14,7 @@ export const NavBottom = ({filter}) => {
                     <input
                         type="text"
                         className="col-11 search-input"
-                        placeholder="Buscá tu vino "
+                        placeholder="Buscár articulos "
                         aria-describedby="basic-addon1"
                         onChange={filter}
                     />

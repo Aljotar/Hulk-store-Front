@@ -12,7 +12,7 @@
     justify-content: center;
 }
 .boton-cargar{
-    background: #b59062;
+    background: #3a3a3a;
     border: none;
     border-radius: 0px;
     width: auto;
@@ -20,7 +20,7 @@
 }
 .boton-cargar:hover{
     background: whitesmoke;
-    color:#b59062 ;
+    color:#313131 ;
     border: none;
     border-radius: 0px;
     width: auto;
@@ -28,14 +28,14 @@
 }
 .boton-cargar:focus{
     background: whitesmoke;
-    color:#b59062 ;
+    color:#3d3d3d ;
     border: none;
     border-radius: 0px;
     width: auto;
     box-shadow: 1px 1px 5px rgb(0, 0, 0);
 }
 .formulario-estilo{
-    box-shadow: 1px 1px 5px rgb(196, 146, 146);
+    box-shadow: 1px 1px 5px rgb(80, 80, 80);
 }
 
 .input-category{

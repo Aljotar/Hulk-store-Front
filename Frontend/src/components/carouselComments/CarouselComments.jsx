@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Card, Col, Container, Image, Row } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 // Import Swiper styles
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";

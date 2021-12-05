@@ -19,9 +19,11 @@ body {
 .container-register {
   background-image: url(./assets/register-page-bg.jpg);
   background-size: cover;
+  background-position: center;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  color: white;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 5px black;
 }
 .container-contact {
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
@@ -48,7 +50,7 @@ body {
   cursor: pointer;
 }
 .ver-mas:hover {
-  color: #b59062;
+  color: #44fa3d;
 }
 
 .bg-grey {
@@ -61,9 +63,9 @@ body {
 /* BOTON GENERAL */
 .btn-general-style {
   font-family: "Montserrat", sans-serif !important;
-  background-color: #b59062;
+  background-color: #44883b;
   color: white;
-  border: 1px solid #b59062;
+  border: 1px solid #111111;
   font-size: 20px;
   padding: 0.5rem 1rem;
   margin: 0.5rem 5px;
@@ -72,7 +74,7 @@ body {
 }
 .btn-general-style:hover {
   background-color: white;
-  color: #b59062;
+  color: #217a28;
 }
 
 /* botones admin */
@@ -138,17 +140,16 @@ body {
   margin: 0;
   display: flow-root;
   text-align: center;
-  background-color: #b59062 !important;
+  background-color: #797979 !important;
   color: white !important;
   font-family: "Montserrat", sans-serif !important;
-  border: 1px solid #b59062;
+  border: 1px solid #494949;
   font-size: 20px;
   padding: 0.5rem 1rem;
   width: 40%;
 }
 .accordion-buy .accordion-header button:hover {
-  background-color: white !important;
-  color: #b59062 !important;
+  background-color: rgb(29, 29, 29) !important
 }
 .accordion-buy .accordion-header button:focus {
   box-shadow: none;

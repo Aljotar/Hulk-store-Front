@@ -58,7 +58,6 @@ export default function CargaProduts({ getProductos }) {
             <Form
               onSubmit={handleSubmit}
               className="formulario-estilo card mt-5 p-5 mx-auto border-0"
-              style={{ width: "auto", background: "beige" }}
             >
               <Row>
                 <Col className="col-12 col-lg-6">
@@ -133,6 +132,19 @@ export default function CargaProduts({ getProductos }) {
                       onChange={(e) => handleChange(e)}
                       type="text"
                       placeholder="$"
+                      aria-describedby="inputGroupPrepend"
+                      required
+                    />
+                  </Form.Group>
+                </Col>
+                <Col className="col-12 col-lg-6">
+                  <Form.Group controlId="amount">
+                    <Form.Label>Cantidad</Form.Label>
+                    <Form.Control
+                      name="amount"
+                      onChange={(e) => handleChange(e)}
+                      type="text"
+                      placeholder=""
                       aria-describedby="inputGroupPrepend"
                       required
                     />
