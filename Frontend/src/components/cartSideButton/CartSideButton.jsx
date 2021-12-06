@@ -48,7 +48,7 @@ export const CartSideButton = ({ cart, setCart, showSideCart, setShowSideCart })
         onHide={handleClose}
         scroll='true'
       >
-        <Offcanvas.Header closeButton> <h4 style={{ color: '#b59062' }} >Tu Carrito </h4>  </Offcanvas.Header>
+        <Offcanvas.Header closeButton> <h4>Tu Carrito </h4>  </Offcanvas.Header>
         <Offcanvas.Body className="text-center mt-2">
           {cart.length !== 0 &&
             <OverlayTrigger

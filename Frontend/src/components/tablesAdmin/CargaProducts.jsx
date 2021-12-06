@@ -1,16 +1,9 @@
 import React from "react";
-import {
-  Accordion,
-  Button,
-  Col,
-  Form,
-  Row,
-  Spinner,
-} from "react-bootstrap";
+import { Accordion, Button, Col, Form, Row, Spinner } from "react-bootstrap";
 import "./cargaProducts.css";
 import { useState } from "react";
 import axios from "axios";
-import swal from 'sweetalert';
+import swal from "sweetalert";
 
 export default function CargaProduts({ getProductos }) {
   const [input, setInput] = useState({
@@ -23,7 +16,6 @@ export default function CargaProduts({ getProductos }) {
     discount: "",
   });
   const [isLoading, setIsLoading] = useState(false);
-
 
   const handleChange = (event) => {
     const { value, name } = event.target;
@@ -38,11 +30,13 @@ export default function CargaProduts({ getProductos }) {
 
     if (form.checkValidity() === true) {
       setIsLoading(true);
-      await axios.post("https://proyecto-final-db.herokuapp.com/api/productos/", input);
+      await axios.post(
+        "http://localhost:4000/api/productos/",
+        input
+      );
       swal("Excelente", "Producto agregado", "success");
       await getProductos();
       setIsLoading(false);
-
     }
     event.target.reset();
   };
@@ -51,9 +45,7 @@ export default function CargaProduts({ getProductos }) {
     <>
       <Accordion>
         <Accordion.Item className="accordion-buy my-4" eventKey="0">
-          <Accordion.Header>
-            Cargar Producto
-          </Accordion.Header>
+          <Accordion.Header>Cargar Producto</Accordion.Header>
           <Accordion.Body className="d-flex">
             <Form
               onSubmit={handleSubmit}
@@ -114,13 +106,22 @@ export default function CargaProduts({ getProductos }) {
                   </Form.Group>
                 </Col>
                 <Col className=" col-12 col-lg-6">
-                  <Form.Group className="d-flex flex-column" controlId="category">
+                  <Form.Group
+                    className="d-flex flex-column"
+                    controlId="category"
+                  >
                     <Form.Label>Categoria</Form.Label>
-                    <select className="input-category" name="category" onChange={(e) => handleChange(e)} required>
+                    <select
+                      className="input-category"
+                      name="category"
+                      onChange={(e) => handleChange(e)}
+                      required
+                    >
                       <option value=""></option>
-                      <option value="Rojo">Rojo</option>
-                      <option value="Espumoso">Espumoso</option>
-                      <option value="Blanco">Blanco</option>
+                      <option value="Comics">Comics</option>
+                      <option value="Accesorios">Accesorios</option>
+                      <option value="Indumentaria">Indumentaria</option>
+                      <option value="Juguetes">Juguetes</option>
                     </select>
                   </Form.Group>
                 </Col>
@@ -176,7 +177,6 @@ export default function CargaProduts({ getProductos }) {
                 </Button>
               </Row>
             </Form>
-
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>

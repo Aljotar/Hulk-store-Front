@@ -23,7 +23,7 @@ export const FormContact = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('https://proyecto-final-db.herokuapp.com/api/mensajes', input);
+            await axios.post('http://localhost:4000/api/mensajes', input);
             swal({
                 title: "Mensaje enviado con exito !",
                 icon: "success",

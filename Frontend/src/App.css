@@ -124,8 +124,8 @@ body {
 /* no results card */
 .no-results-card {
   color: #f7f7f7;
-  background-color: #b59062ce !important ;
-  border: 0.3rem ridge #b8884eb6 !important ;
+  background-color: #424242ce !important ;
+  border: 0.3rem ridge #030303b6 !important ;
 }
 
 /* acordion logica compra */
@@ -205,5 +205,5 @@ body {
 }
 .circle-btn:hover {
   background: #2f476b;
-  color: #b59062;
+  color: #2c2c2c;
 }

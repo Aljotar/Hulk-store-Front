@@ -104,7 +104,7 @@ li:hover::after {
     background: none;
     border: none;
     font-size: 30px;
-    color: white !important;
+    color: rgb(56, 56, 56) !important;
 }
 
 /* Estilo del usuario logeado */
@@ -129,7 +129,7 @@ li:hover::after {
     border: none;
 }
 .responsive-navbar-header {
-    background-color: #203048 !important;
+    background-color: #306233 !important;
 }
 
 .responsive-navbar-links {
@@ -140,7 +140,7 @@ li:hover::after {
 }
 .responsive-navbar-links li {
     list-style: none;
-    border-bottom: 1px solid #b59062;
+    border-bottom: 1px solid #494949;
     /* transform: skew(340deg); */
     transition: all 0.5s;
 
@@ -150,7 +150,7 @@ li:hover::after {
     cursor: pointer;
 }
 .responsive-navbar-links li:hover  {
-    background-color: #b59062; 
+    background-color: #72c386; 
 }
 .responsive-navbar-links li:hover a {
     color: white !important; 
@@ -240,9 +240,9 @@ li:hover::after {
     display: flex;
     align-items: end;
     justify-content: center;
-    background-color: #fff;
+    background-color: rgb(15, 47, 90);
     border-radius: 50%;
-    color: #b59062;
+    color: #ffffff;
     font-size: 15px;
     font-weight: 800;
     height: 1.3em;

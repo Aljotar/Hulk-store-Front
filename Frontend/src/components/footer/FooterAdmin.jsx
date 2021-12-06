@@ -11,10 +11,10 @@ const FooterAdmin = () => {
         <div className="mt-auto">
             <div className="d-flex align-items-center justify-content-between footer2">
                 <div>
-                    <p>© 2021 The Wine Vibes All rights reserved</p>
+                    <p>© 2021 Derechos reservados Hulk Store</p>
                 </div>
                 <div>
-                    <p>Keep Calm and drink Wine</p>
+                    <p>Universo DC/Marvel</p>
                 </div>
                 <div>
                     <button className="volverArriba" onClick={scrollToTop}><FaArrowUp /></button>

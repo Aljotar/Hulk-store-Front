@@ -65,7 +65,7 @@ export const MyProfileView = ({ user, requestUserData }) => {
     const tokenLocal = leerDeLocalStorage("token") || {};
     const headers = { "x-auth-token": tokenLocal.token };
     localStorage.removeItem("token");
-    await axios.delete(`https://proyecto-final-db.herokuapp.com/api/usuarios/${user._id}`, {
+    await axios.delete(`http://localhost:4000/api/usuarios/${user._id}`, {
       headers,
     });
     history.push("/");
@@ -86,7 +86,7 @@ export const MyProfileView = ({ user, requestUserData }) => {
     const tokenLocal = leerDeLocalStorage("token") || {};
     const headers = { "x-auth-token": tokenLocal.token };
     await axios.put(
-      "https://proyecto-final-db.herokuapp.com/api/usuarios/image",
+      "http://localhost:4000/api/usuarios/image",
       { image: base64 },
       {
         headers,

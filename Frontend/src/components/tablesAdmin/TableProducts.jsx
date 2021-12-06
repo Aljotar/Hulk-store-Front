@@ -36,7 +36,7 @@ export const TableProducts = ({ productos, getProductos, tableProducts, setTable
 
     const findProduct = async (_id) => {
         setIsLoading(true);
-        const response = await axios.get(`https://proyecto-final-db.herokuapp.com/api/productos/${_id}`);
+        const response = await axios.get(`http://localhost:4000/api/productos/${_id}`);
         setProductFind(response.data);
         setIsLoading(false);
         handleShowModalEditar();
@@ -119,6 +119,7 @@ export const TableProducts = ({ productos, getProductos, tableProducts, setTable
                             <th>Nombre</th>
                             <th>Precio</th>
                             <th>Categoria</th>
+                            <th>Stock</th>
                             <th colSpan="2">Actions</th>
                         </tr>
                     </thead>
@@ -127,11 +128,12 @@ export const TableProducts = ({ productos, getProductos, tableProducts, setTable
                             <tr> 
                                 <td colSpan="6">No hay productos registrados</td> 
                             </tr> :
-                            currentProducts.map(({ name, price, category, _id }, tabProducts) => (
+                            currentProducts.map(({ name, price, category,amount, _id }, tabProducts) => (
                                 <tr className="text-center" key={tabProducts}>
                                     <td>{name}</td>
                                     <td>$ {price}</td>
                                     <td>{category}</td>
+                                    <td>{amount}</td>
                                     <td className="p-1 d-flex ">
                                         <OverlayTrigger
                                             placement="right"

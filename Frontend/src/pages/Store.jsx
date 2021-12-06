@@ -3,7 +3,6 @@ import "../App.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { CardsProduct } from "../components/cardProduct/CardsProduct";
 import { FiltersProducts } from "../components/filtersProducts/FiltersProducts";
-import { SliderProducts } from "../components/sliderProductos/SliderProducts";
 import { CartSideButton } from "../components/cartSideButton/CartSideButton";
 
 
@@ -46,9 +45,6 @@ function Store({ productos, favorites, setFavorites, cart, setCart, allProducts,
             />
           </Col>
         </Row>
-        <Container className="mt-5">
-          <SliderProducts productos={productos} />
-        </Container>
       </Container>
       <CartSideButton
         setCart={setCart}

@@ -70,7 +70,7 @@ const NavbarMainMobile = ({ user, setShow, show }) => {
             <Offcanvas.Body >
                 <div className="responsive-navbar-links text-center ">
                     <li className="p-2 mx-3" >
-                        <Nav.Link as={NavLink} to="/store"  exact activeClassName="link-active" onClick={handleClose}>NUESTROS VINOS</Nav.Link>
+                        <Nav.Link as={NavLink} to="/store"  exact activeClassName="link-active" onClick={handleClose}>NUESTROS ARTICULOS</Nav.Link>
                     </li>
                     <li className="p-2 mx-3">
                         <Nav.Link as={NavLink} to="/contact" activeClassName="link-active" onClick={handleClose}>CONTACTO</Nav.Link>

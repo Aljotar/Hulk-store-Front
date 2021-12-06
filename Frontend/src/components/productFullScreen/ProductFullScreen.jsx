@@ -31,10 +31,10 @@ export const ProductFullScreen = ({ producto, cart, setCart }) => {
             <div className="precio-mayor mt-4">
                 <p>${(precioMayor).toFixed(2)}</p>
                 <span>
-                  (12 o MÁS BOTELLLAS)
+                  (12 o MÁS ARTICULOS)
                 </span>
             </div>
-          <p className="precio-menor mt-1 ">${producto.price} POR BOTELLA</p>
+          <p className="precio-menor mt-1 ">${producto.price} POR ARTICUlO</p>
           <div className="mb-2">
           <button
               disabled={isInCart}

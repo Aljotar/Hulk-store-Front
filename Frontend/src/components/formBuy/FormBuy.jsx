@@ -58,7 +58,7 @@ export const FormBuy = ({ user, cart }) => {
                 productsList: cart.map((cartItem) => ({ productId: cartItem.producto._id, quantity: cartItem.cantidad }))
 
             }
-            await axios.post('https://proyecto-final-db.herokuapp.com/api/ventas', newBuy);
+            await axios.post('http://localhost:4000/api/ventas', newBuy);
 
             swal({
                 title: "Compra Exitosa !",
@@ -117,7 +117,7 @@ export const FormBuy = ({ user, cart }) => {
             <Form.Group className="mb-3" controlId="validationCustom02">
                 <h5 className="mt-2">Nacimiento</h5>
                 <Form.Text className="text-muted">
-                    Para comprar alcohol debes ser mayor de edad
+                    Para comprar debes ser mayor de edad
                 </Form.Text>
                 {tokenLocal.token ?
                     <Form.Control
@@ -135,7 +135,7 @@ export const FormBuy = ({ user, cart }) => {
                     />
                 }
                 <Form.Control.Feedback type="invalid">
-                    Necesitamos saber tu edad para Venderte Alcohol
+                    Necesitamos validar tu edad
                 </Form.Control.Feedback>
             </Form.Group>
 
@@ -254,7 +254,7 @@ export const FormBuy = ({ user, cart }) => {
                         </Form.Text>
                         <Form.Group className="mb-3" controlId="validationCustom07">
                             <FloatingLabel controlId="floatingCardNumber" label="Numero de Tarjeta">
-                                <Form.Control type="text" minLength="16" maxLength="19"
+                                <Form.Control type="number" minLength="16" maxLength="19"
                                     name="buyerCardNumber"
                                     onChange={(e) => handleChange(e)}
                                     required />
@@ -264,7 +264,7 @@ export const FormBuy = ({ user, cart }) => {
                             </Form.Control.Feedback>
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="validationCustom08">
-                            <FloatingLabel controlId="floatingCardName" label="Nombre Tarjeta">
+                            <FloatingLabel controlId="floatingCardName" label="Nombre Titular">
                                 <Form.Control type="text"
                                  maxLength="20"
                                  name="buyerCardName"
@@ -277,8 +277,8 @@ export const FormBuy = ({ user, cart }) => {
                         </Form.Group>
                         <Row className="mb-3">
                             <Form.Group as={Col} controlId="validationCustom10">
-                                <FloatingLabel controlId="floatingCardDate" label="Vencimiento (MM/YY)">
-                                    <Form.Control type="text" minLength="5" maxLength="5"
+                                <FloatingLabel controlId="floatingCardDate" label="Vencimiento (MMYY)">
+                                    <Form.Control type="number" minLength="4" maxLength="4"
                                         name="buyerCardDate"
                                         onChange={(e) => handleChange(e)}
                                         required />
@@ -295,7 +295,7 @@ export const FormBuy = ({ user, cart }) => {
                                         required />
                                 </FloatingLabel>
                                 <Form.Control.Feedback type="invalid">
-                                   Fecha de Vencimiento Necesaria 
+                                   Codigo de seguridad necesario
                                 </Form.Control.Feedback>
                             </Form.Group>
                         </Row>

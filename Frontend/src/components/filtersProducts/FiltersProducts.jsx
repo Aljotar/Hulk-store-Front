@@ -33,9 +33,10 @@ export const FiltersProducts = ({ setSelectCategory, selectCategory, onselectCat
           <div className="d-flex flex-column">
             <label className="m-2" >Categoria</label>
             <select onChange={filtrarCategoria} className="form-select" >
-              <option value="Rojo">Rojo</option>
-              <option value="Blanco">Blanco</option>
-              <option value="Espumoso">Espumoso</option>
+              <option value="Comics">Comics</option>
+              <option value="Accesorios">Accesorios</option>
+              <option value="Indumentaria">Indumentaria</option>
+              <option value="Juguetes">Juguetes</option>
             </select>
           </div>
           <div>
