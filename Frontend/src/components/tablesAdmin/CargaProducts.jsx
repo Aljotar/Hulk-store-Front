@@ -131,7 +131,7 @@ export default function CargaProduts({ getProductos }) {
                     <Form.Control
                       name="price"
                       onChange={(e) => handleChange(e)}
-                      type="text"
+                      type="number"
                       placeholder="$"
                       aria-describedby="inputGroupPrepend"
                       required
@@ -144,7 +144,7 @@ export default function CargaProduts({ getProductos }) {
                     <Form.Control
                       name="amount"
                       onChange={(e) => handleChange(e)}
-                      type="text"
+                      type="number"
                       placeholder=""
                       aria-describedby="inputGroupPrepend"
                       required
@@ -157,7 +157,7 @@ export default function CargaProduts({ getProductos }) {
                 <Form.Control
                   name="discount"
                   onChange={(e) => handleChange(e)}
-                  type="text"
+                  type="number"
                   placeholder=""
                   aria-describedby="inputGroupPrepend"
                 />
