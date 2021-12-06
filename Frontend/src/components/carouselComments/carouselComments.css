@@ -60,3 +60,6 @@
   opacity: 1;
   z-index: 2;
 }
+.card-tamaño img{
+  height: 55rem;
+}
