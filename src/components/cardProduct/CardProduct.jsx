@@ -11,8 +11,9 @@ export const CardProduct = ({
   setCart,
   setShowSideCart,
 }) => {
-  const [isInCart, setIsInCart] = useState(false);
+  const [cantBuy, setCantBuy] = useState(false);
   const [isFavorites, setIsFavorites] = useState(false);
+  const [btnText, setBtnText] = useState("");
 
   // Funcion para para productos a favoritos
   const addFavorite = () => {
@@ -52,14 +53,14 @@ export const CardProduct = ({
   };
 
   useEffect(() => {
-    const inCart = cart.find(
+    const inCart = cart.some(
       (productoCart) => productoCart.producto._id === producto._id
     );
-    if (inCart) {
-      setIsInCart(true);
-    } else {
-      setIsInCart(false);
-    }
+    const outOfStock = producto.amount <= 0;
+    if (inCart) setBtnText("Ya esta en el carrito")
+    else if (outOfStock) setBtnText("Sin Stock")
+    else setBtnText("Agregar al carrito")
+    setCantBuy(inCart || outOfStock);
   }, [cart, producto]);
 
   return (
@@ -95,15 +96,15 @@ export const CardProduct = ({
       </Card>
       <div className="d-flex align-items-center justify-content-center bg-white">
         <button
-          disabled={isInCart}
+          disabled={cantBuy}
           className={
-            isInCart
+            cantBuy
               ? "col-9 responsive-cart-button-add"
               : "col-9 btn-general-style"
           }
           onClick={addToCart}
         >
-          {isInCart ? "Añadido al Carrito" : "Añadir al Carrito"}
+          {btnText}
         </button>
         <button className="col-3 add-favorite-btn" onClick={toggleFavorite}>
           <FaHeart className={isFavorites ? "is-favorite" : "no-favorite"} />
