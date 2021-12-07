@@ -103,7 +103,7 @@ export const FormLogin = ({ requestUserData, cart }) => {
                     <h3 className="header">Bienvenido a Hulk Store</h3>
                 </div>
                 <Form 
-                noValidate validated={validated} className="login-form" onSubmit={handleSubmit} >
+                className="login-form" onSubmit={handleSubmit} >
                     <Form.Group className="mb-3 border-0" controlId="formBasicEmail">
                         <Form.Control
                             name="email"
@@ -111,7 +111,7 @@ export const FormLogin = ({ requestUserData, cart }) => {
                             type="email"
                             className="col-11 login-input"
                             placeholder="Email"
-                            maxLength="35"
+                            maxLength="25"
                             required
                         />
                     </Form.Group>
