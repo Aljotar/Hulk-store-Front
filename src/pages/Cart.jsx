@@ -14,6 +14,7 @@ function Cart({ cart, setCart, user }) {
     };
 
     const changeCantidad = (_id, cantidad) => {
+        
         const updateCart = cart.map((productCart) => {
             if (productCart.producto._id === _id) {
                 return { ...productCart, cantidad };
