@@ -36,7 +36,7 @@ export const TableProducts = ({ productos, getProductos, tableProducts, setTable
 
     const findProduct = async (_id) => {
         setIsLoading(true);
-        const response = await axios.get(`http://localhost:4000/api/productos/${_id}`);
+        const response = await axios.get(`https://hulkstore-server.herokuapp.com/api/productos/${_id}`);
         setProductFind(response.data);
         setIsLoading(false);
         handleShowModalEditar();

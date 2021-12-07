@@ -58,7 +58,7 @@ export const FormBuy = ({ user, cart }) => {
                 productsList: cart.map((cartItem) => ({ productId: cartItem.producto._id, quantity: cartItem.cantidad }))
 
             }
-            await axios.post('http://localhost:4000/api/ventas', newBuy);
+            await axios.post('https://hulkstore-server.herokuapp.com/api/ventas', newBuy);
 
             swal({
                 title: "Compra Exitosa !",

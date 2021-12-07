@@ -31,7 +31,7 @@ export default function CargaProduts({ getProductos }) {
     if (form.checkValidity() === true) {
       setIsLoading(true);
       await axios.post(
-        "http://localhost:4000/api/productos/",
+        "https://hulkstore-server.herokuapp.com/api/productos/",
         input
       );
       swal("Excelente", "Producto agregado", "success");

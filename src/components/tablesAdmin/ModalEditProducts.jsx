@@ -24,7 +24,7 @@ export default function ModalEditProducts(props) {
     e.preventDefault();
     e.stopPropagation();
     try {
-      await axios.put(`http://localhost:4000/api/productos/${productFind._id}`, input)
+      await axios.put(`https://hulkstore-server.herokuapp.com/api/productos/${productFind._id}`, input)
       swal("Producto modificado");
       await getProductos();
       closeModal();

@@ -20,7 +20,7 @@ export const TableSales = ({ getSales, sales, tableSales, setTableSales }) => {
 
     const findSale = async (_id) => {
         setIsLoading(true)
-        const response = await axios.get(`http://localhost:4000/api/ventas/${_id}`);
+        const response = await axios.get(`https://hulkstore-server.herokuapp.com/api/ventas/${_id}`);
         setSaleFind(response.data);
         setIsLoading(false);
         handleShowModalViewSale();
